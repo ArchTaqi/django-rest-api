@@ -24,8 +24,6 @@ urlpatterns += [
     path('', include('apps.users.urls')),
     path('', include('apps.pets.urls')),
 
-    # path('auth/login/', LoginView.as_view(), name="auth-login"),
-    # path('auth/register/', RegisterUsers.as_view(), name="auth-register"),
     # re_path('api/(?P<version>(v1|v2))/', include('apps.music.urls'))
     # path(r'^api/v1/', include(apipatterns, namespace='api')),
 
