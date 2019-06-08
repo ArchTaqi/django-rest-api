@@ -1,0 +1,870 @@
+{% extends "base.html" %}
+{% load static %}
+ 
+{% block content %}
+
+<section class="margin-top">
+    <ul class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active"><span>Browse</span></li>
+    </ul>
+</section>
+
+
+<h1>Browse</h1>
+<hr>
+
+<h2>Site statics</h2>
+<p>Total Movies Index: <strong>56775</strong></p>
+<p>Total Subtitles Index: <strong>1285541</strong></p>
+<hr>
+
+
+<h2>Browse By Movie Country</h2>
+<div class="row">
+        <div class="col-sm-6">
+            <a href="/country/english-subtitles">English</a>
+            <span class="badge">14289</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/usa-subtitles">USA</a>
+            <span class="badge">8911</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/japanese-subtitles">Japanese</a>
+            <span class="badge">2610</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/french-subtitles">French</a>
+            <span class="badge">2505</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/japan-subtitles">Japan</a>
+            <span class="badge">2496</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/uk-subtitles">UK</a>
+            <span class="badge">2359</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/france-subtitles">France</a>
+            <span class="badge">1727</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/hindi-subtitles">Hindi</a>
+            <span class="badge">1643</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/italian-subtitles">Italian</a>
+            <span class="badge">1432</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/german-subtitles">German</a>
+            <span class="badge">1372</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/germany-subtitles">Germany</a>
+            <span class="badge">1180</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/canada-subtitles">Canada</a>
+            <span class="badge">1151</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/spanish-subtitles">Spanish</a>
+            <span class="badge">1093</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/india-subtitles">India</a>
+            <span class="badge">1054</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/cantonese-subtitles">Cantonese</a>
+            <span class="badge">937</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/mandarin-subtitles">Mandarin</a>
+            <span class="badge">901</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/south-korea-subtitles">South Korea</a>
+            <span class="badge">805</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/russian-subtitles">Russian</a>
+            <span class="badge">793</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/korean-subtitles">Korean</a>
+            <span class="badge">616</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/spain-subtitles">Spain</a>
+            <span class="badge">502</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/telugu-subtitles">Telugu</a>
+            <span class="badge">502</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/italy-subtitles">Italy</a>
+            <span class="badge">481</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/tamil-subtitles">Tamil</a>
+            <span class="badge">451</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/swedish-subtitles">Swedish</a>
+            <span class="badge">413</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/australia-subtitles">Australia</a>
+            <span class="badge">392</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/belgium-subtitles">Belgium</a>
+            <span class="badge">343</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/hong-kong-subtitles">Hong Kong</a>
+            <span class="badge">330</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/china-subtitles">China</a>
+            <span class="badge">300</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/sweden-subtitles">Sweden</a>
+            <span class="badge">290</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/denmark-subtitles">Denmark</a>
+            <span class="badge">261</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/netherlands-subtitles">Netherlands</a>
+            <span class="badge">258</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/danish-subtitles">Danish</a>
+            <span class="badge">256</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/imdbpro-subtitles">IMDbPro</a>
+            <span class="badge">245</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/thai-subtitles">Thai</a>
+            <span class="badge">245</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/hebrew-subtitles">Hebrew</a>
+            <span class="badge">232</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/malayalam-subtitles">Malayalam</a>
+            <span class="badge">232</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/polish-subtitles">Polish</a>
+            <span class="badge">232</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/portuguese-subtitles">Portuguese</a>
+            <span class="badge">226</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/company-contact-information-subtitles">company contact information</a>
+            <span class="badge">217</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/turkey-subtitles">Turkey</a>
+            <span class="badge">204</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/russia-subtitles">Russia</a>
+            <span class="badge">187</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/arabic-subtitles">Arabic</a>
+            <span class="badge">185</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/norwegian-subtitles">Norwegian</a>
+            <span class="badge">184</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/brazil-subtitles">Brazil</a>
+            <span class="badge">183</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/dutch-subtitles">Dutch</a>
+            <span class="badge">178</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/norway-subtitles">Norway</a>
+            <span class="badge">171</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/czech-subtitles">Czech</a>
+            <span class="badge">167</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/argentina-subtitles">Argentina</a>
+            <span class="badge">165</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/ireland-subtitles">Ireland</a>
+            <span class="badge">160</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/finland-subtitles">Finland</a>
+            <span class="badge">151</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/thailand-subtitles">Thailand</a>
+            <span class="badge">145</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/mexico-subtitles">Mexico</a>
+            <span class="badge">140</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/greek-subtitles">Greek</a>
+            <span class="badge">127</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/turkish-subtitles">Turkish</a>
+            <span class="badge">127</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/austria-subtitles">Austria</a>
+            <span class="badge">125</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/tagalog-subtitles">Tagalog</a>
+            <span class="badge">118</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/hungarian-subtitles">Hungarian</a>
+            <span class="badge">117</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/switzerland-subtitles">Switzerland</a>
+            <span class="badge">115</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/filipino-subtitles">Filipino</a>
+            <span class="badge">113</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/latin-subtitles">Latin</a>
+            <span class="badge">113</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/taiwan-subtitles">Taiwan</a>
+            <span class="badge">113</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/czech-republic-subtitles">Czech Republic</a>
+            <span class="badge">111</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/poland-subtitles">Poland</a>
+            <span class="badge">111</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/israel-subtitles">Israel</a>
+            <span class="badge">104</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/new-zealand-subtitles">New Zealand</a>
+            <span class="badge">103</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/finnish-subtitles">Finnish</a>
+            <span class="badge">98</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/chinese-subtitles">Chinese</a>
+            <span class="badge">96</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/romania-subtitles">Romania</a>
+            <span class="badge">89</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/persian-subtitles">Persian</a>
+            <span class="badge">81</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/romanian-subtitles">Romanian</a>
+            <span class="badge">80</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/south-africa-subtitles">South Africa</a>
+            <span class="badge">79</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/bengali-subtitles">Bengali</a>
+            <span class="badge">77</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/hungary-subtitles">Hungary</a>
+            <span class="badge">73</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/portugal-subtitles">Portugal</a>
+            <span class="badge">70</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/serbian-subtitles">Serbian</a>
+            <span class="badge">70</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/luxembourg-subtitles">Luxembourg</a>
+            <span class="badge">67</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/urdu-subtitles">Urdu</a>
+            <span class="badge">64</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/panjabi-subtitles">Panjabi</a>
+            <span class="badge">63</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/marathi-subtitles">Marathi</a>
+            <span class="badge">62</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/chile-subtitles">Chile</a>
+            <span class="badge">60</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/serbo-croatian-subtitles">Serbo-Croatian</a>
+            <span class="badge">59</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/singapore-subtitles">Singapore</a>
+            <span class="badge">54</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/philippines-subtitles">Philippines</a>
+            <span class="badge">50</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/vietnamese-subtitles">Vietnamese</a>
+            <span class="badge">49</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/greece-subtitles">Greece</a>
+            <span class="badge">48</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/iceland-subtitles">Iceland</a>
+            <span class="badge">46</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/kannada-subtitles">Kannada</a>
+            <span class="badge">46</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/indonesia-subtitles">Indonesia</a>
+            <span class="badge">42</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/indonesian-subtitles">Indonesian</a>
+            <span class="badge">39</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/united-arab-emirates-subtitles">United Arab Emirates</a>
+            <span class="badge">38</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/icelandic-subtitles">Icelandic</a>
+            <span class="badge">37</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/min-nan-subtitles">Min Nan</a>
+            <span class="badge">37</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/yiddish-subtitles">Yiddish</a>
+            <span class="badge">37</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/catalan-subtitles">Catalan</a>
+            <span class="badge">35</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/serbia-subtitles">Serbia</a>
+            <span class="badge">35</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/soviet-union-subtitles">Soviet Union</a>
+            <span class="badge">34</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/bulgaria-subtitles">Bulgaria</a>
+            <span class="badge">33</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/slovak-subtitles">Slovak</a>
+            <span class="badge">33</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/croatia-subtitles">Croatia</a>
+            <span class="badge">31</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/country/iran-subtitles">Iran</a>
+            <span class="badge">31</span>
+        </div>
+</div>
+<hr>
+
+
+<h2>Browse By Movie Gender</h2>
+<div class="row">
+        <div class="col-sm-6">
+            <a href="/Gender/drama-subtitles">Drama</a>
+            <span class="badge">23264</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/comedy-subtitles">Comedy</a>
+            <span class="badge">13613</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/action-subtitles">Action</a>
+            <span class="badge">7886</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/romance-subtitles">Romance</a>
+            <span class="badge">6646</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/thriller-subtitles">Thriller</a>
+            <span class="badge">5805</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/crime-subtitles">Crime</a>
+            <span class="badge">5733</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/horror-subtitles">Horror</a>
+            <span class="badge">4558</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/adventure-subtitles">Adventure</a>
+            <span class="badge">4362</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/animation-subtitles">Animation</a>
+            <span class="badge">3813</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/mystery-subtitles">Mystery</a>
+            <span class="badge">2913</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/documentary-subtitles">Documentary</a>
+            <span class="badge">2877</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/fantasy-subtitles">Fantasy</a>
+            <span class="badge">2507</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/family-subtitles">Family</a>
+            <span class="badge">2480</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/sci-fi-subtitles">Sci-Fi</a>
+            <span class="badge">2422</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/short-subtitles">Short</a>
+            <span class="badge">1746</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/history-subtitles">History</a>
+            <span class="badge">1544</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/biography-subtitles">Biography</a>
+            <span class="badge">1508</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/war-subtitles">War</a>
+            <span class="badge">1205</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/music-subtitles">Music</a>
+            <span class="badge">980</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/musical-subtitles">Musical</a>
+            <span class="badge">863</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/western-subtitles">Western</a>
+            <span class="badge">668</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/sport-subtitles">Sport</a>
+            <span class="badge">595</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/film-noir-subtitles">Film-Noir</a>
+            <span class="badge">266</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/reality-tv-subtitles">Reality-TV</a>
+            <span class="badge">146</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/adult-subtitles">Adult</a>
+            <span class="badge">113</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/news-subtitles">News</a>
+            <span class="badge">68</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/talk-show-subtitles">Talk-Show</a>
+            <span class="badge">55</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Gender/game-show-subtitles">Game-Show</a>
+            <span class="badge">44</span>
+        </div>
+</div>
+<hr>
+
+<h2>Browse By Movie Language</h2>
+<div class="row">
+        <div class="col-sm-6">
+            <a href="/Language/english-subtitles">English</a>
+            <span class="badge">401322</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/arabic-subtitles">Arabic</a>
+            <span class="badge">166546</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/farsi-persian-subtitles">Farsi/Persian</a>
+            <span class="badge">122372</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/indonesian-subtitles">Indonesian</a>
+            <span class="badge">88404</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/brazillian-portuguese-subtitles">Brazillian Portuguese</a>
+            <span class="badge">54419</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/vietnamese-subtitles">Vietnamese</a>
+            <span class="badge">51506</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/french-subtitles">French</a>
+            <span class="badge">50169</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/danish-subtitles">Danish</a>
+            <span class="badge">45706</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/italian-subtitles">Italian</a>
+            <span class="badge">37872</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/swedish-subtitles">Swedish</a>
+            <span class="badge">29146</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/dutch-subtitles">Dutch</a>
+            <span class="badge">25616</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/spanish-subtitles">Spanish</a>
+            <span class="badge">24925</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/norwegian-subtitles">Norwegian</a>
+            <span class="badge">24331</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/finnish-subtitles">Finnish</a>
+            <span class="badge">17586</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/romanian-subtitles">Romanian</a>
+            <span class="badge">14261</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/malay-subtitles">Malay</a>
+            <span class="badge">14043</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/hebrew-subtitles">Hebrew</a>
+            <span class="badge">13658</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/turkish-subtitles">Turkish</a>
+            <span class="badge">10526</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/greek-subtitles">Greek</a>
+            <span class="badge">9439</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/portuguese-subtitles">Portuguese</a>
+            <span class="badge">8010</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/german-subtitles">German</a>
+            <span class="badge">7539</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/korean-subtitles">Korean</a>
+            <span class="badge">6756</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/thai-subtitles">Thai</a>
+            <span class="badge">5540</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/chinese-bg-code-subtitles">Chinese BG code</a>
+            <span class="badge">5114</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/serbian-subtitles">Serbian</a>
+            <span class="badge">5077</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/big-5-code-subtitles">Big 5 code</a>
+            <span class="badge">4562</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/croatian-subtitles">Croatian</a>
+            <span class="badge">4384</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/polish-subtitles">Polish</a>
+            <span class="badge">4149</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/bengali-subtitles">Bengali</a>
+            <span class="badge">4031</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/bulgarian-subtitles">Bulgarian</a>
+            <span class="badge">3592</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/russian-subtitles">Russian</a>
+            <span class="badge">3385</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/hungarian-subtitles">Hungarian</a>
+            <span class="badge">3014</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/japanese-subtitles">Japanese</a>
+            <span class="badge">2845</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/czech-subtitles">Czech</a>
+            <span class="badge">2598</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/estonian-subtitles">Estonian</a>
+            <span class="badge">1714</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/slovenian-subtitles">Slovenian</a>
+            <span class="badge">1695</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/malayalam-subtitles">Malayalam</a>
+            <span class="badge">1258</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/burmese-subtitles">Burmese</a>
+            <span class="badge">1192</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/sinhala-subtitles">Sinhala</a>
+            <span class="badge">1069</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/urdu-subtitles">Urdu</a>
+            <span class="badge">837</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/albanian-subtitles">Albanian</a>
+            <span class="badge">790</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/icelandic-subtitles">Icelandic</a>
+            <span class="badge">730</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/macedonian-subtitles">Macedonian</a>
+            <span class="badge">609</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/slovak-subtitles">Slovak</a>
+            <span class="badge">570</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/lithuanian-subtitles">Lithuanian</a>
+            <span class="badge">537</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/english-german-subtitles">English/ German</a>
+            <span class="badge">254</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/ukranian-subtitles">Ukranian</a>
+            <span class="badge">239</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/hindi-subtitles">Hindi</a>
+            <span class="badge">217</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/kurdish-subtitles">Kurdish</a>
+            <span class="badge">211</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/latvian-subtitles">Latvian</a>
+            <span class="badge">184</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/dutch-english-subtitles">Dutch/ English</a>
+            <span class="badge">150</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/greenlandic-subtitles">Greenlandic</a>
+            <span class="badge">110</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/basque-subtitles">Basque</a>
+            <span class="badge">92</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/catalan-subtitles">Catalan</a>
+            <span class="badge">75</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/azerbaijani-subtitles">Azerbaijani</a>
+            <span class="badge">73</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/bosnian-subtitles">Bosnian</a>
+            <span class="badge">72</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/tamil-subtitles">Tamil</a>
+            <span class="badge">71</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/ukrainian-subtitles">Ukrainian</a>
+            <span class="badge">65</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/pashto-subtitles">Pashto</a>
+            <span class="badge">51</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/tagalog-subtitles">Tagalog</a>
+            <span class="badge">43</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/esperanto-subtitles">Esperanto</a>
+            <span class="badge">39</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/armenian-subtitles">Armenian</a>
+            <span class="badge">30</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/swahili-subtitles">Swahili</a>
+            <span class="badge">18</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/telugu-subtitles">Telugu</a>
+            <span class="badge">16</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/bulgarian-english-subtitles">Bulgarian/ English</a>
+            <span class="badge">12</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/hungarian-english-subtitles">Hungarian/ English</a>
+            <span class="badge">11</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/english-foreign-parts-only-subtitles">English                                                                               (Foreign parts only)</a>
+            <span class="badge">9</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/kannada-subtitles">Kannada</a>
+            <span class="badge">8</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/somali-subtitles">Somali</a>
+            <span class="badge">8</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/sundanese-subtitles">Sundanese</a>
+            <span class="badge">7</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/georgian-subtitles">Georgian</a>
+            <span class="badge">6</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/belarusian-subtitles">Belarusian</a>
+            <span class="badge">5</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/punjabi-subtitles">Punjabi</a>
+            <span class="badge">5</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/indonesian-foreign-parts-only-subtitles">Indonesian                                                                               (Foreign parts only)</a>
+            <span class="badge">4</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/mongolian-subtitles">Mongolian</a>
+            <span class="badge">3</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/yoruba-subtitles">Yoruba</a>
+            <span class="badge">3</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/manipuri-subtitles">Manipuri</a>
+            <span class="badge">2</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/rohingya-subtitles">Rohingya</a>
+            <span class="badge">2</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/danish-foreign-parts-only-subtitles">Danish                                                                               (Foreign parts only)</a>
+            <span class="badge">1</span>
+        </div>
+        <div class="col-sm-6">
+            <a href="/Language/malay-foreign-parts-only-subtitles">Malay                                                                                                                        (Foreign parts only)</a>
+            <span class="badge">1</span>
+        </div>
+</div>
+
+{% endblock %}

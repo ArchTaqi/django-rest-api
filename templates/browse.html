@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+ 
+{% block content %}
+<section class="margin-top">
+    <ul class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active"><span>Browse</span></li>
+    </ul>
+</section>
+
+<h1>Browse</h1>
+<hr>
+
+<h2>Site statics</h2>
+<p>Total Organization Index: <strong>56783</strong></p>
+<hr>
+
+<h2>Browse By Category</h2>
+<div class="row">
+        {% for category in categories %}
+        <div class="col-sm-6">
+            <a href="/country/english-subtitles">{{category.name}}</a>
+            <span class="badge">14289</span>
+        </div>
+        {% endfor %}
+</div>
+<hr>
+
+<h2>Browse By City</h2>
+<div class="row">
+    {% for city in cities %}
+        <div class="col-sm-6">
+            <a href="/country/english-subtitles">{{city.name}}</a>
+            <span class="badge">14289</span>
+        </div>
+    {% endfor %}
+</div>
+<hr>
+{% endblock %}

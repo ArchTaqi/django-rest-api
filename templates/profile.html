@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="margin-top">
+    <ul class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'browse' %}">Organization</a></li>
+        <li class="active"><span>{{organization.name}}</span></li>
+    </ul>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-lg-19 col-md-20 col-sm-16">
+            <h1>{{organization.name}}</h1>
+        </div>
+    </div>
+
+    <hr>
+    <div class="row">
+        <div class="col-lg-16 col-md-15 col-sm-24">
+            <div class="movie-list-info">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-6">
+                        {% if organization.logo %}
+                            <img src="{{organization.logo}}" class="img-responsive text-center center-block" alt="{{organization.name}}">
+                        {% else %}
+                            <img src="{% static 'img/poster-not-available.jpg' %}" class="img-responsive text-center center-block" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="col-lg-18 col-md-16 col-sm-18">
+                        <p class="text-justify">{{organization.description}}</p>
+                        <div class="well">
+                            <div class="row">
+                                <p class="col-sm-12">Founded: <strong>{{organization.founded}} </strong></p>
+                                <p class="col-sm-12">Category: <a target="_blank" rel="nofollow" href="">{{organization.category.name}}</a></p>
+                            </div>
+                            <div class="row">
+                                    <p class="col-sm-12">City: {{organization.city.name}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-24">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8 col-md-9 col-sm-24">
+            <ul class="list-group">
+                <li class="list-group-item active"><h4> Web, Social</h4></li>
+                <li class="list-group-item">
+                    <p><strong><a href="{{organization.facebook}}" title="{{organization.facebook}}">Facebook</a></strong></p>
+                </li>
+                <li class="list-group-item">
+                    <p><strong><a href="{{organization.facebook}}" title="{{organization.facebook}}">Facebook</a></strong></p>
+                </li>
+                <li class="list-group-item">
+                    <p><strong><a href="{{organization.facebook}}" title="{{organization.facebook}}">Facebook</a></strong></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Locations</h3>
+    <div class="no-more-tables margin-top">
+        <table class="table table-striped table-responsive table-hover" cellspacing="0">
+        <tbody>
+        <tr class="hidden-xs">
+            <th><i class="fa fa-download"></i></th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Telephone</th>
+            <th>Direction</th>
+        </tr>
+        <tr>
+                <td data-title=""><a title="" href=""><i class="fa fa-download"></i></a></td>
+                <td data-title=""><a title="" href="">....</a></td>
+                <td class="" data-title=""><a href="">----</a></td>
+                <td class="text-nowrap" data-title="">----</td>
+                <td data-title="File">1</td>
+            </tr>
+        <tr><td colspan="5" style="padding:0; margin:0;"></td></tr>
+        </tbody>
+    </table>
+    </div>
+</section>
+
+
+<section>
+    <h3>Direction</h3>
+    <div class="no-more-tables margin-top">
+        <div class="row">
+             <div class="col-sm-24 col-md-24">
+            <div class="map" id="map" style="width: 100%; height:550px;">
+
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+
+        var address = '1033 Massachusetts Avenue Suite 3 Cambridge, MA 02138';
+
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({ 'address': address }, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+
+                    var mapOptions = {
+                        zoom: 14,
+//                        center: new google.maps.LatLng(-34.397, 150.644)
+                        center: results[0].geometry.location
+                    };
+
+                    var map = new google.maps.Map(document.getElementById('map'),
+                            mapOptions);
+
+                    map.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location,
+                        title:"Hello World!"
+                    });
+
+                    var contentString = '<div>' + 'President and Fellows of Harvard College' + '</div>';
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map,marker);
+                    });
+
+                    infowindow.open(map,marker);
+                }
+            });
+        }
+
+        function loadScript() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+                    'callback=initialize';
+            document.body.appendChild(script);
+        }
+
+        window.onload = loadScript;
+
+    </script>
+{% endblock %}
