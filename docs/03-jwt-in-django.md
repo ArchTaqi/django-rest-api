@@ -1,3 +1,63 @@
+## JWT Authentication in Django Rest Framework
+
+### JWT versus API key
+
+API key is usually generated and that’s it! It usually doesn’t expire unless such mechanism is implemented on server side. By using API key, each request to server will include a header with the key. API key creates security issue if such key are exposed to unauthorized user (i.e: captured in man-in-the-middle attack). It could be used by unauthorized party to perform legit request.
+Unlike API token, JWT has an expiry timestamp, it has to be constantly renewed or refreshed to keep the token valid. If such token is exposed to third party, he/she might not be able to refresh the token and it will be invalidated after it’s expiring timestamp.
+
+### JWT versus Cookie-based sessions
+
+To keep track of all user sessions, server has to maintain a record of those. In Django, user sessions are stored and maintained in it’s underlying DB. This constraints scalability of the system, even if system are distributed and scaled horizontally, each node will still have to retrieve the session data stored in underlying database. Second, it is even more complex to make your session universal across multiple domains.
+JWT can save you a lot of fuss when dealing with authentication across multiple domain and horizontal scalability since there is no need to keep session stored.
+
+### Set up DRF with JWT
+
+`pipenv install djangorestframework_jwt`
+
+```python
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
+}
+JWT_AUTH = {
+    'JWT_ALLOW_REFRESH': True,
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=1),
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
+    'JWT_AUTH_HEADER_PREFIX': 'Bearer',  # Bearer <token>
+    'JWT_SECRET_KEY': SECRET_KEY or "235856!gsdgsd",
+}
+```
+
+```python
+# urls.py
+from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
+
+urlpatterns = [
+  ...
+  url(r'^auth/obtain_token/', obtain_jwt_token),
+  url(r'^auth/refresh_token/', refresh_jwt_token),
+  ...
+]
+```
+**GET JWT Token**
+`$ curl -X POST -H "Content-Type: application/json" -d '{"username":"<your_username>","password":"<your_password>"}' http://<your_domain_and_port>/auth/obtain_token`
+
+**REFRESH Token**
+`$ curl -X POST -H "Content-Type: application/json" -d '{"token":"<EXISTING_TOKEN>"}' http://<your_domain_and_port>/auth/refresh_token/`
+
+**Consume Endpoint**
+`$ http POST 127.0.0.1:8000/api/customers/ 'Authorization: Bearer <jwt-token>'`
+
+
+## Consume Your REST Service from Vue.js
+
+`npm install --save vue-axios axios vuex jwt-decode`
+
+Todo : https://melvinkoh.me/jwt-authentication-in-vuejs-and-django-rest-framework-part-2-cjye5a3ss001qvvs1fi123163
+
+
+
 # JSON Web Token in Python
 
 > The traditional mode of authentication for websites has been to use cookie based authentication.
