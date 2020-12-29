@@ -1,21 +1,12 @@
 # -*- coding: utf-8 -*-
 
 from rest_framework import serializers
-from .models import Customer, Product
-
-
-class CustomerSerializer(serializers.ModelSerializer):
-
-    class Meta:
-
-        model = Customer
-        fields = '__all__'
+from apps.api.models import Product
 
 
 class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
-
         model = Product
         fields = '__all__'
         extra_kwargs = {
@@ -24,10 +15,10 @@ class ProductSerializer(serializers.ModelSerializer):
             }
         }
 
+
 class ProductDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
-
         model = Product
         fields = [
             'id',

@@ -10,7 +10,7 @@ class ProductService():
         product_repository = ProductRepository()
 
         response = product_repository.get_product_by_id(str(product_id))
-        if response == None:
+        if response is None:
             return None
 
         response.raise_for_status()

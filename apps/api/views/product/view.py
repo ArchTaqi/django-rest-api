@@ -1,32 +1,12 @@
 # -*- coding: utf-8 -*-
-
 from rest_framework import generics, status, views
 from rest_framework.response import Response
-from rest_framework.authentication import SessionAuthentication
 from rest_framework.permissions import IsAdminUser, DjangoModelPermissions
-from rest_framework.authtoken.models import Token
 from django.http import Http404
-from django.contrib.auth import authenticate
-from django.shortcuts import get_object_or_404
-from .models import Customer, Product
-from .serializers import CustomerSerializer, ProductSerializer, ProductDetailSerializer
-from .services import ProductService
+from apps.api.models import Customer, Product
+from apps.api.serializers import ProductSerializer, ProductDetailSerializer
+from apps.api.services import ProductService
 from requests import exceptions
-
-
-class CustomerList(generics.ListCreateAPIView):
-
-    queryset = Customer.objects.all()
-    serializer_class = CustomerSerializer
-    permission_classes = (IsAdminUser, DjangoModelPermissions)
-
-
-class CustomerDetail(generics.RetrieveUpdateDestroyAPIView):
-
-    lookup_field = 'id'
-    queryset = Customer.objects.all()
-    serializer_class = CustomerSerializer
-    permission_classes = (IsAdminUser, DjangoModelPermissions)
 
 
 class ProductList(generics.ListCreateAPIView):
@@ -117,37 +97,3 @@ class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
             raise Http404()
 
         return customer_favorite_product
-
-
-class Auth(views.APIView):
-    def post(self, request, *args, **kwargs):
-        username = request.data.get('username')
-        password = request.data.get('password')
-        if not username or not password:
-            return Response(
-                {
-                    'username, password': [
-                        'This fields are required.'
-                    ]
-                },
-                status.HTTP_400_BAD_REQUEST
-            )
-
-        user = authenticate(username=username, password=password)
-        if not user:
-            return Response(
-                {
-                    'detail': [
-                        'Invalid Credentials'
-                    ]
-                },
-                status=status.HTTP_400_BAD_REQUEST
-            )
-
-        token, _ = Token.objects.get_or_create(user=user)
-        return Response(
-            {
-                'token': token.key
-            },
-            status=status.HTTP_200_OK
-        )
